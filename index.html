@@ -1,0 +1,55 @@
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Formulario</title>
+    <script type="text/javascript" src="includes/formcheck.js"></script>
+</head>
+<body>
+
+    <h1>Bienvenido</h1>
+    <h2>Registre sus datos</h2>
+
+    <form name="formulario" method="post" action="index.php" value='add'>
+      
+        <input type="hidden" name="add" value="add" />
+        <label>Nombre: </label>
+        <input type="text" name="Nombre" placeholder="Nombre"
+            required pattern="[A-Za-z]{2,20}" onkeypress="return CheckCharactersOnly(event,letters);" />
+        <br />
+        <br />
+
+        <label>Apellido Paterno: </label>
+        <input type="text" name="ApellidoPaterno" placeholder="Apellido paterno" required pattern="[A-Za-z]{2,20}" onkeypress="return CheckCharactersOnly(event,letters);" />
+        <br />
+        <br />
+
+        <label>Apellido Materno: </label>
+        <input type="text" name="ApellidoMaterno" placeholder="Apellido materno" required pattern="[A-Za-z]{2,20}" onkeypress="return CheckCharactersOnly(event,letters);" />
+        <br />
+        <br />
+
+        <label>Fecha de nacimiento: </label>
+        <input type="date" name="FechaNacimiento" placeholder="Fecha de Nacimiento" required />
+        <br />
+        <br />
+
+        <label>Telefono: </label>
+        <input type="tel" name="Telefono" placeholder="Telefono" required pattern="[0-9]{10}" onkeypress="return CheckCharactersOnly(event,numbers);" />
+        <br />
+        <br />
+
+        <label>Celular: </label>
+        <input type="tel" name="Celular" placeholder="Celular" required pattern="[0-9]{10}" onkeypress="return CheckCharactersOnly(event,numbers);" />
+        <br />
+        <br />
+
+        <label>Correo: </label>
+        <input type="email" name="Correo" placeholder="Correo" required />
+        <br />
+        <br />
+        <input type="submit" name='enviar' />
+
+
+    </form>
+</body>
+</html>
